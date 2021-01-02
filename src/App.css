@@ -1,0 +1,176 @@
+
+:root{
+    --dark-color: rgb(102, 38, 63);
+    --faint-color: rgb(129, 69, 94);
+    /* --faint-color: rgb(160, 62, 99); */
+    --emcolor: rgb(228, 174, 13);
+}
+
+
+body{
+    margin: 1.5rem;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.App{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.switch{
+    position: relative;
+    height: 26px;
+    width: 44px;
+    display: block;
+    cursor: pointer;
+}
+
+.switch input{
+    height: 0;
+    width: 0;
+    margin: 0;
+    opacity: 0;
+}
+
+.switch .slider{
+    position: absolute;
+    top:0;
+    left:9px;
+    height: 26px;
+    width: 26px;
+    background-color: var(--emcolor);
+    border-radius: 50%;
+    transition: 0.4s;
+}
+.switch .slider::before{
+    position: absolute;
+    content: "";
+    top:0;
+    left: 9px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.4s;
+}
+
+.switch input:checked + .slider::before{
+    transform: translateX(-18px);
+}
+.switch input:checked + .slider{
+    background-color: var(--dark-color);
+}
+
+ul.list{
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+    padding-inline-start: 0px;
+}
+
+.list li{
+    padding: 1.5rem 0 1.5rem 2rem;
+}
+header{
+    border-radius: 0.5rem;
+}
+.Nav{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--faint-color);
+    min-height: 58px;
+}
+
+.leftCorner{
+    width: 80%;
+    padding-left: 1rem;
+}
+
+.rightCorner{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    border-left: 1px solid var(--faint-color);
+}
+
+.hero{
+    display: flex;
+    min-height: 600px;
+    flex-wrap: wrap;
+}
+
+.text-section{
+    width: 60%;
+    padding: 4rem 6rem 0;
+}
+.text-section h1{
+    line-height: 3.6rem;
+    margin-bottom: 0rem;
+    font-size: 3.5rem;
+}
+.text-section p{
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+.image-section{
+    width: 40%;
+    display: inline-block;
+    position: relative;
+}
+.image-section img{
+    position: absolute;
+    top: 4rem;
+}
+.designColorBox1{
+    width: 6rem;
+    height: 5rem;
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+}
+.designColorBox2{
+    width: 2rem;
+    height:2rem;
+    position: absolute;
+    top: 10rem;
+    right: 8rem;
+}
+
+@media screen and (max-width: 768px){
+    .rightCorner{
+        display: none;
+    }
+    .hero{
+        display: block;
+    }
+    .designColorBox1{
+        display: none;
+    }
+    .designColorBox2{
+        display: none;
+    }
+    .text-section{
+        width: 100%;
+        padding: 2rem;
+    }
+    .text-section h1{
+        line-height: 2rem;
+        margin-bottom: 0rem;
+        font-size: 2rem;
+        word-wrap: break-word;
+    }
+    .image-section{
+        width: 100%;
+    }
+    .image-section img{
+        height: 400px;
+    }
+}
