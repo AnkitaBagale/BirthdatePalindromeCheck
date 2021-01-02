@@ -100,10 +100,23 @@ header{
     padding: 1.5rem 1rem;
     border-left: 1px solid var(--faint-color);
 }
-
+a{
+    text-decoration: none;
+    color: white;
+}
+a.linkPrimary{
+    padding: 0.5rem 2rem;
+    background-color: white;
+    color: var(--dark-color);
+    border-radius: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+}
 .hero{
     display: flex;
-    min-height: 600px;
+    min-height: 550px;
     flex-wrap: wrap;
 }
 

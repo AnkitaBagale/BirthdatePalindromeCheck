@@ -38,21 +38,26 @@ const App = ()=>{
                 </ul>
                 </div>
                 <div className="RightCorner">
-                    <span>Github Repo</span>
+                    <a target="_blank" href="https://github.com/AnkitaBagale/BirthdatePalindromeCheck">Github Repo</a>
                 </div>      
             </div>
             <section className="hero">
                 <div className="text-section">
                     <h1>Check out if your <span style={{color:`${HLtheme}`}}>Birthdate</span> is <span style={{color:`${HLtheme}`}}>Palidrome</span>.</h1>
                     <p>A palindrome is a word/number which reads the same backward as forward</p>
+                    <a className="linkPrimary" href="#mainSection">Let's Go</a>
                 </div>
                 <div className="image-section">
-                    <img src={heroImg} width="100%" height="600px"></img>
+                    <img src={heroImg} width="100%" height="550px"></img>
                     <div style={{backgroundColor:`${theme[0]}`}} className="designColorBox1"></div>
                     <div style={{backgroundColor:`${theme[0]}`}} className="designColorBox2"></div>
                 </div>
             </section>
         </header>
+
+        <section id="mainSection">
+                
+        </section>
     </div>
    )
 }
