@@ -82,7 +82,8 @@ ul.list{
     padding: 1.5rem 0 1.5rem 2rem;
 }
 header{
-    border-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
 }
 .Nav{
     display: flex;
@@ -117,6 +118,7 @@ a{
     font-weight: bold;
     display: inline-block;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 button.linkPrimary{
     color: white;
@@ -183,7 +185,8 @@ input[type='date']{
     border-radius: 1.5rem;
 }
 footer{
-    border-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
 }
 footer ul.list{
     justify-content: center;

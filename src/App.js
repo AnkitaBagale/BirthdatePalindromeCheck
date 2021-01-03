@@ -203,6 +203,7 @@ const App = ()=>{
                     <div style={{backgroundColor:`${theme[0]}`}} className="designColorBox2"></div>
                 </div>
             </section>
+            
         </header>
 
         <section id="mainSection">
