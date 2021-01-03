@@ -1,6 +1,6 @@
 
 :root{
-    --dark-color: rgb(102, 38, 63);
+    --dark-color: #66263f;
     --faint-color: rgb(129, 69, 94);
     /* --faint-color: rgb(160, 62, 99); */
     --emcolor: rgb(228, 174, 13);
@@ -13,6 +13,9 @@ body{
 *{
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
 }
 
 .App{
@@ -67,6 +70,7 @@ body{
 ul.list{
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: left;
     align-items: center;
     margin-block-start: 0rem;
@@ -104,7 +108,7 @@ a{
     text-decoration: none;
     color: white;
 }
-a.linkPrimary{
+.linkPrimary{
     padding: 0.5rem 2rem;
     background-color: white;
     color: var(--dark-color);
@@ -113,6 +117,11 @@ a.linkPrimary{
     font-weight: bold;
     display: inline-block;
     margin-top: 1rem;
+}
+button.linkPrimary{
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 .hero{
     display: flex;
@@ -129,13 +138,17 @@ a.linkPrimary{
     margin-bottom: 0rem;
     font-size: 3.5rem;
 }
-.text-section p{
+p{
     font-size: 1.1rem;
     margin: 1rem 0;
 }
+h2{
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 0rem;
+}
 .image-section{
     width: 40%;
-    display: inline-block;
     position: relative;
 }
 .image-section img{
@@ -156,13 +169,41 @@ a.linkPrimary{
     top: 10rem;
     right: 8rem;
 }
-
+#mainSection{
+    width: 100%;
+    max-width: 600px;
+    margin: 12rem auto 8rem;
+    text-align: center;
+}
+input[type='date']{
+    border: none;
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+}
+footer{
+    border-radius: 0.5rem;
+}
+footer ul.list{
+    justify-content: center;
+    border-bottom: 1px solid var(--faint-color);
+}
+footer ul.list li{
+    padding: 2rem;
+}
+.footer-text{
+    display: block;
+    padding: 1rem;
+    text-align: center;
+}
 @media screen and (max-width: 768px){
     .rightCorner{
         display: none;
     }
     .hero{
         display: block;
+        min-height: 100px;
     }
     .designColorBox1{
         display: none;
@@ -180,10 +221,22 @@ a.linkPrimary{
         font-size: 2rem;
         word-wrap: break-word;
     }
+    h2{
+        font-size: 1.5rem;
+        line-height: 1.6rem;
+        margin-bottom: 0rem;
+    }
     .image-section{
+        position: static;
         width: 100%;
     }
     .image-section img{
-        height: 400px;
+    position: static;
+    height: 400px;
     }
+    #mainSection{
+        margin: 4rem auto;
+        text-align: center;
+    }
+
 }
