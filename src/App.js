@@ -4,18 +4,18 @@ import heroImg from 'dateImg.jpg';
 import loadImg from 'loadImg.gif';
 
 //theme=[bgColor, color]
-var darkTheme = ["rgb(102, 38, 63)", "white"];
-var lightTheme = ["rgb(228, 174, 13)", "white"];
-var date;
-var newoutput="";
-var datesInMonth=[31,28,31,30,31,30,31,31,30,31,30,31];
+const darkTheme = ["rgb(102, 38, 63)", "white"];
+const lightTheme = ["rgb(228, 174, 13)", "white"];
+let date;
+let newoutput="";
+const datesInMonth=[31,28,31,30,31,30,31,31,30,31,30,31];
 //highlightTheme=[darktheme, lighttheme]
-var highlightTheme=["rgb(102, 38, 63)","rgb(228, 174, 13)"];
-var setThemeFlag=0;
+const highlightTheme=["rgb(102, 38, 63)","rgb(228, 174, 13)"];
+let setThemeFlag=0;
 const App = ()=>{
-   var [theme, setTheme] = useState(darkTheme); 
-   var [HLtheme, setHLTheme] = useState(highlightTheme[1]); 
-   var [outputDiv, setOutputDiv] = useState("");
+   const [theme, setTheme] = useState(darkTheme); 
+   const [HLtheme, setHLTheme] = useState(highlightTheme[1]); 
+   const [outputDiv, setOutputDiv] = useState("");
 
    function inputDateHandler(e){
        if(date){
@@ -32,17 +32,17 @@ const App = ()=>{
    }
 
    function checkPalindrome(){
-       var dateArray= date.split("-");
-       var inputYear= dateArray[0];
-       var inputMonth=dateArray[1];
-       var inputDate=dateArray[2];
-       var setFlag = checkAllCombi(inputYear,inputMonth,inputDate);
+       const dateArray= date.split("-");
+       const inputYear= dateArray[0];
+       const inputMonth=dateArray[1];
+       const inputDate=dateArray[2];
+       let setFlag = checkAllCombi(inputYear,inputMonth,inputDate);
        if(setFlag){
         newoutput= (`Whoa!!! Your birthdate in format ${setFlag} is palindrome`)
        }
 
        else{
-        var[nextdate, diff]=findNextDate(inputDate,inputMonth,inputYear);
+        let [nextdate, diff]=findNextDate(inputDate,inputMonth,inputYear);
         newoutput = `Awww! Your birthdate is not palindrome. Nearest palindrome date is ${nextdate} You missed it by ${diff} days.`;
        }
        setOutputDiv(<p style={{border:`2px solid ${theme[0]}`, padding:"1rem"}}>{newoutput}</p>);
@@ -52,16 +52,16 @@ const App = ()=>{
    function checkAllCombi(yyyy, mm, dd){
        
     //yyyymmdd format string
-    var dateFormat1 = yyyy+mm+dd;
+    const dateFormat1 = yyyy+mm+dd;
     
      //ddmmyyyy format string
-     var dateFormat2 = dd+mm+yyyy;
+     const dateFormat2 = dd+mm+yyyy;
 
     //mmddyy format string
-    var dateFormat3 = mm+dd+yyyy.substring(2);
+    const dateFormat3 = mm+dd+yyyy.substring(2);
         
     //mddyyyy format string
-    var dateFormat4 = Number(mm)+dd+yyyy;
+    const dateFormat4 = Number(mm)+dd+yyyy;
 
     if (isPalindrome(dateFormat1)){
         return (`${yyyy}-${mm}-${dd}`);
@@ -83,7 +83,7 @@ const App = ()=>{
 
 
    function isPalindrome(stringCheck){
-    var max=Math.floor(stringCheck.length/2);
+    const max=Math.floor(stringCheck.length/2);
     for(let i=0; i<max; i++){
         if(stringCheck[i]!= stringCheck[stringCheck.length-1-i]){
          return false;   
@@ -94,12 +94,12 @@ const App = ()=>{
    
    
    function findNextDate(date, month, year){
-    var ddNo1= Number(date);
-    var mmNo1= Number(month);
-    var yyNo1=Number(year);
-    var ddNo2= Number(date);
-    var mmNo2= Number(month);
-    var yyNo2=Number(year);
+    let ddNo1= Number(date);
+    let mmNo1= Number(month);
+    let yyNo1=Number(year);
+    let ddNo2= Number(date);
+    let mmNo2= Number(month);
+    let yyNo2=Number(year);
     
     for(let i=1; i>0; i++){
 
